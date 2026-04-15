@@ -70,6 +70,11 @@ CREATE OR REPLACE STAGE FROSTBYTE_RAW_STAGE
 
 -- GRANT USAGE ON INTEGRATION PYPI_ACCESS_INTEGRATION TO ROLE DEMO_ROLE;
 
+-- ----------------------------------------------------------------------------
+-- ALTERNATE: Built-in Artifact Repository (trial account compatible)
+-- ----------------------------------------------------------------------------
+USE ROLE ACCOUNTADMIN;
+GRANT DATABASE ROLE SNOWFLAKE.PYPI_REPOSITORY_USER TO ROLE DEMO_ROLE;
 
 -- ----------------------------------------------------------------------------
 -- Create the event table
